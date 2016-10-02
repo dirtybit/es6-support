@@ -1,0 +1,208 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+
+    font-family: Helvetica, sans-serif;
+    font-weight: inherit;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px 0;
+}
+
+header {
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#feature-table {
+    border-spacing: 1px;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+#feature-table th[data-browser] {
+    cursor: pointer;
+}
+
+#feature-table td {
+    padding: 10px;
+    min-width: 75px;
+}
+
+#feature-table td:first-of-type {
+    min-width: 250px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#feature-table th:nth-of-type(n+2),
+#feature-table td:nth-of-type(n+2) {
+    text-align: center;
+}
+
+#feature-table > tr {
+    font-size: 13px;
+}
+
+#feature-table > tr {
+    cursor: pointer;
+}
+
+#feature-table tbody {
+    display: none;
+    font-size: 12px;
+}
+
+#feature-table tbody.expanded {
+    display: table-row-group;
+}
+
+#feature-table tbody code {
+    display: none;
+    background-color: #ddd;
+    z-index: 20;
+    white-space: pre;
+    position: absolute;
+    font-family: monospace;
+    padding: 15px;
+    left: calc(100% - 50px);
+    top: 5px;
+    box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 10px;
+}
+
+#feature-table tbody tr > td:first-of-type {
+    position: relative;
+}
+
+#feature-table tbody td:first-of-type {
+    padding-left: 24px;
+}
+
+#feature-table tbody td:first-of-type:hover {
+    background-color: #f2f2f2;
+}
+
+#feature-table tbody td:hover > code {
+    display: block;
+}
+
+#feature-table tbody td:nth-of-type(n+2) {
+    padding: 10px 25px;
+    background-color: rgba(196, 66, 48, 0.9);
+    color: #fff;
+}
+
+#feature-table tbody td.supports:nth-of-type(n+2) {
+    background-color: rgba(57, 181, 74, 0.9);
+}
+
+#feature-table td.supports:nth-of-type(n+2) > span:empty::after {
+    content: "+";
+}
+
+#feature-table tbody td:nth-of-type(n+2) > span:empty::after {
+    content: "x";
+    font-weight: bold;
+}
+
+
+#feature-table th {
+    padding: 10px;
+    font-weight: bold;
+}
+
+#feature-table td:first-of-type,
+#feature-table th:first-of-type {
+    text-align: left;
+}
+
+.full-support,
+.no-support,
+.partial-support {
+    color: #fff;
+    font-weight: bold;
+}
+
+.full-support {
+    background-color: #39b54a;
+}
+
+.no-support {
+    background-color: #c44230;
+
+}
+
+.partial-support {
+    background-color: #f08434;
+}
+
+#version-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#version-popup-overlay.hidden {
+    display: none;
+}
+
+#version-popup {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 480px;
+}
+
+#version-popup h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#version-popup > div {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+#version-popup label {
+    margin-right: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+}
+
+#version-popup label input {
+    margin-right: 10px;
+}

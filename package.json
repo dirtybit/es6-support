@@ -1,0 +1,11 @@
+{
+  "name": "es6-support",
+  "version": "1.0.0",
+  "description": "Show browser support for ES6 features",
+  "main": "index.js",
+  "devDependencies": {
+    "object.assign": "^4.0.4"
+  },
+  "author": "dirtybit",
+  "license": "MIT"
+}
